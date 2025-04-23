@@ -128,7 +128,7 @@ def analyze_with_bedrock(chunk_file, chunk_idx, total_chunks):
     
     # 프롬프트 구성
     prompt = f"""
-    다음은 플레이투게더라는 소셜 온라인 게임의 Discord 채팅 로그입니다. 
+    다음은 소셜 온라인 게임의 채팅 로그입니다. 
     이 데이터를 분석하여 다음 정보를 제공해주세요:
     
     1. 가장 활발한 사용자 5명과 그들의 메시지 빈도
@@ -190,7 +190,7 @@ def combine_results(result_files):
     
     # 프롬프트 구성
     prompt = f"""
-    다음은 플레이투게더라는 소셜 온라인 게임의 Discord 채팅 로그를 여러 부분으로 나누어 분석한 결과입니다.
+    다음은 소셜 온라인 게임의 채팅 로그를 여러 부분으로 나누어 분석한 결과입니다.
     이 분석 결과들을 종합하여 전체적인 인사이트를 제공해주세요:
     
     {json.dumps(all_results, indent=2, ensure_ascii=False)}
@@ -228,7 +228,7 @@ def combine_results(result_files):
 
 def main():
     """메인 실행 함수"""
-    print("플레이투게더 Discord 채팅 로그 분석 시작")
+    print("채팅 로그 분석 시작")
     
     # 1. 파일 분할
     chunk_files = split_csv_file()

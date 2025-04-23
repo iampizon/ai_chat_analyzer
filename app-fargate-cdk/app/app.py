@@ -5,42 +5,27 @@ import os
 import json
 from analyze_chat_logs import split_csv_file, analyze_with_bedrock, combine_results
 
-import logging
-
-# 로깅 설정
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-
 # 페이지 설정
 st.set_page_config(
-    page_title="Discord 채팅 로그 분석기",
+    page_title="채팅 로그 분석기",
     page_icon="📊",
     layout="wide"
 )
 
 # 제목
-st.title("Discord 채팅 로그 분석기")
+st.title("채팅 로그 분석기")
 
 # 파일 업로드 섹션
 st.header("1. CSV 파일 업로드")
-uploaded_file = st.file_uploader("Discord 채팅 로그 CSV 파일을 업로드하세요", type=['csv'])
+uploaded_file = st.file_uploader("채팅 로그 CSV 파일을 업로드하세요", type=['csv'])
 
 if uploaded_file is not None:
     # 업로드된 파일을 임시로 저장
-
-    try:
-        logger.info(f"파일 업로드 시작: {uploaded_file.name}, 크기: {uploaded_file.size} 바이트")
-        with open('./uploaded_log.csv', 'wb') as f:
-            f.write(uploaded_file.getvalue())
-        logger.info("파일 업로드 성공")
-        st.success("파일이 성공적으로 업로드되었습니다!")
-    except Exception as e:
-        logger.error(f"파일 업로드 실패: {str(e)}", exc_info=True)
-        st.error(f"파일 업로드 중 오류 발생: {str(e)}")
-
+    with open('./uploaded_log.csv', 'wb') as f:
+        f.write(uploaded_file.getvalue())
+    
+    st.success("파일이 성공적으로 업로드되었습니다!")
+    
     # 분석 시작 버튼
     if st.button("분석 시작"):
         # 진행 상황을 표시할 프로그레스 바
@@ -127,7 +112,7 @@ with st.sidebar:
     st.header("사용 방법")
     st.markdown("""
     1. CSV 파일 업로드
-        - Discord 채팅 로그 CSV 파일을 선택하여 업로드합니다.
+        - 채팅 로그 CSV 파일을 선택하여 업로드합니다.
     
     2. 분석 시작
         - 파일 업로드 후 '분석 시작' 버튼을 클릭합니다.

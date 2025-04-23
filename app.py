@@ -17,7 +17,7 @@ st.title("채팅 로그 분석기")
 
 # 파일 업로드 섹션
 st.header("1. CSV 파일 업로드")
-uploaded_file = st.file_uploader("Discord 채팅 로그 CSV 파일을 업로드하세요", type=['csv'])
+uploaded_file = st.file_uploader("채팅 로그 CSV 파일을 업로드하세요", type=['csv'])
 
 if uploaded_file is not None:
     # 업로드된 파일을 임시로 저장
@@ -112,7 +112,7 @@ with st.sidebar:
     st.header("사용 방법")
     st.markdown("""
     1. CSV 파일 업로드
-        - Discord 채팅 로그 CSV 파일을 선택하여 업로드합니다.
+        - 채팅 로그 CSV 파일을 선택하여 업로드합니다.
     
     2. 분석 시작
         - 파일 업로드 후 '분석 시작' 버튼을 클릭합니다.
