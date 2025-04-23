@@ -1,4 +1,4 @@
-# Discord 채팅 로그 분석기 - ECS Fargate 배포
+# 채팅 로그 분석기 - ECS Fargate 배포
 
 이 프로젝트는 AWS CDK를 사용하여 Streamlit 기반의 채팅 로그 분석 애플리케이션을 ECS Fargate에 배포하는 인프라를 정의합니다.
 
