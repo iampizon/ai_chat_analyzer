@@ -1,11 +1,11 @@
 # Discord 채팅 로그 분석기 - ECS Fargate 배포
 
-이 프로젝트는 AWS CDK를 사용하여 Streamlit 기반의 Discord 채팅 로그 분석 애플리케이션을 ECS Fargate에 배포하는 인프라를 정의합니다.
+이 프로젝트는 AWS CDK를 사용하여 Streamlit 기반의 채팅 로그 분석 애플리케이션을 ECS Fargate에 배포하는 인프라를 정의합니다.
 
 ## 애플리케이션 설명
 
 ### app.py
-`app.py`는 Streamlit 기반의 웹 애플리케이션으로, Discord 채팅 로그를 분석하는 인터페이스를 제공합니다. 주요 기능은 다음과 같습니다:
+`app.py`는 Streamlit 기반의 웹 애플리케이션으로, 채팅 로그를 분석하는 인터페이스를 제공합니다. 주요 기능은 다음과 같습니다:
 
 - CSV 형식의 Discord 채팅 로그 파일 업로드
 - 대용량 로그 파일을 작은 청크로 분할
