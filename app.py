@@ -7,13 +7,13 @@ from analyze_chat_logs import split_csv_file, analyze_with_bedrock, combine_resu
 
 # 페이지 설정
 st.set_page_config(
-    page_title="Discord 채팅 로그 분석기",
+    page_title="채팅 로그 분석기",
     page_icon="📊",
     layout="wide"
 )
 
 # 제목
-st.title("Discord 채팅 로그 분석기")
+st.title("채팅 로그 분석기")
 
 # 파일 업로드 섹션
 st.header("1. CSV 파일 업로드")
